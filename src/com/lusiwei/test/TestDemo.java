@@ -32,4 +32,9 @@ public class TestDemo {
         String sql="insert into user_info(u_name,u_sex,u_age,u_birthplace,u_qq,u_email) values(?,?,?,?,?,?)";
         System.out.println(myDao.update(sql, "令狐冲", "男", 33, "重庆", "1214214", "2142141@qq.com"));
     }
+    @Test
+    public void delete(){
+        String sql="delete from user_info where u_name=?";
+        System.out.println(myDao.update(sql, "令狐冲"));
+    }
 }
